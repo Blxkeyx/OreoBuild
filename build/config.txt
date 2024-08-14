@@ -1,0 +1,6 @@
+compiler=gcc
+sources=main.cpp,helper.cpp
+output=myprogram
+include_paths=.
+libraries=
+debug=true

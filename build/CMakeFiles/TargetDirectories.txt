@@ -1,0 +1,3 @@
+/home/krastov/OreoBuild/OreoBuild/build/CMakeFiles/oreobuild.dir
+/home/krastov/OreoBuild/OreoBuild/build/CMakeFiles/edit_cache.dir
+/home/krastov/OreoBuild/OreoBuild/build/CMakeFiles/rebuild_cache.dir

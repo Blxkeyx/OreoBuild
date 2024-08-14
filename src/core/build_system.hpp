@@ -31,4 +31,4 @@ private:
     void addDependency(const std::string& source, const std::string& dependency);
 };
 
-} // namespace OreoBuild
+}

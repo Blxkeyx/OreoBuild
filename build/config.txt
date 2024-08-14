@@ -1,6 +1,8 @@
-compiler=gcc
-sources=main.cpp,helper.cpp
-output=myprogram
-include_paths=.
-libraries=
-debug=true
+compiler = gcc
+sources = main.cpp,helper.cpp
+output = myprogram
+debug_flags = -g -O0 -Wall -Wextra
+include_paths = .,/usr/local/include
+libraries = m,pthread
+debug = false
+release_flags = -O2 -DNDEBUG -march=native

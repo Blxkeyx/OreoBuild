@@ -8,6 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/krastov/OreoBuild/OreoBuild/src/cli_handler.cpp" "CMakeFiles/oreobuild.dir/src/cli_handler.cpp.o" "gcc" "CMakeFiles/oreobuild.dir/src/cli_handler.cpp.o.d"
+  "/home/krastov/OreoBuild/OreoBuild/src/color.cpp" "CMakeFiles/oreobuild.dir/src/color.cpp.o" "gcc" "CMakeFiles/oreobuild.dir/src/color.cpp.o.d"
   "/home/krastov/OreoBuild/OreoBuild/src/core/build_system.cpp" "CMakeFiles/oreobuild.dir/src/core/build_system.cpp.o" "gcc" "CMakeFiles/oreobuild.dir/src/core/build_system.cpp.o.d"
   "/home/krastov/OreoBuild/OreoBuild/src/core/compiler_gcc.cpp" "CMakeFiles/oreobuild.dir/src/core/compiler_gcc.cpp.o" "gcc" "CMakeFiles/oreobuild.dir/src/core/compiler_gcc.cpp.o.d"
   "/home/krastov/OreoBuild/OreoBuild/src/core/config.cpp" "CMakeFiles/oreobuild.dir/src/core/config.cpp.o" "gcc" "CMakeFiles/oreobuild.dir/src/core/config.cpp.o.d"

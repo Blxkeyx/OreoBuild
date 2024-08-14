@@ -180,8 +180,9 @@ CMakeFiles/oreobuild.dir/src/main.cpp.o: \
  /usr/include/x86_64-linux-gnu/c++/10/bits/error_constants.h \
  /usr/include/c++/10/stdexcept /usr/include/c++/10/bits/std_mutex.h \
  /usr/include/c++/10/bits/unique_lock.h \
- /usr/include/c++/10/condition_variable /usr/include/c++/10/set \
- /usr/include/c++/10/bits/stl_tree.h /usr/include/c++/10/bits/stl_set.h \
+ /usr/include/c++/10/condition_variable /usr/include/c++/10/atomic \
+ /usr/include/c++/10/set /usr/include/c++/10/bits/stl_tree.h \
+ /usr/include/c++/10/bits/stl_set.h \
  /usr/include/c++/10/bits/stl_multiset.h /usr/include/c++/10/fstream \
  /usr/include/c++/10/istream /usr/include/c++/10/ios \
  /usr/include/c++/10/bits/ios_base.h \
@@ -200,4 +201,7 @@ CMakeFiles/oreobuild.dir/src/main.cpp.o: \
  /usr/include/c++/10/bits/istream.tcc /usr/include/c++/10/bits/codecvt.h \
  /usr/include/x86_64-linux-gnu/c++/10/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/10/bits/c++io.h \
- /usr/include/c++/10/bits/fstream.tcc /usr/include/c++/10/iostream
+ /usr/include/c++/10/bits/fstream.tcc \
+ /home/krastov/OreoBuild/OreoBuild/src/cli_handler.hpp \
+ /home/krastov/OreoBuild/OreoBuild/src/color.hpp \
+ /usr/include/c++/10/iostream

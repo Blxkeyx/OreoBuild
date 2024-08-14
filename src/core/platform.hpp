@@ -14,4 +14,4 @@ public:
 
 std::unique_ptr<Platform> createPlatform();
 
-} // namespace OreoBuild
+}

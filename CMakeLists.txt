@@ -12,7 +12,9 @@ add_executable(oreobuild
     src/core/config.cpp
     src/core/compiler_gcc.cpp
     src/core/file_utils.cpp
-    src/core/thread_pool.cpp  # Add this line
+    src/core/thread_pool.cpp
+    src/cli_handler.cpp
+    src/color.cpp
 )
 
 target_link_libraries(oreobuild PRIVATE pthread dl)

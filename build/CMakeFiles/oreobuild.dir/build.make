@@ -153,6 +153,34 @@ CMakeFiles/oreobuild.dir/src/core/thread_pool.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/oreobuild.dir/src/core/thread_pool.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/krastov/OreoBuild/OreoBuild/src/core/thread_pool.cpp -o CMakeFiles/oreobuild.dir/src/core/thread_pool.cpp.s
 
+CMakeFiles/oreobuild.dir/src/cli_handler.cpp.o: CMakeFiles/oreobuild.dir/flags.make
+CMakeFiles/oreobuild.dir/src/cli_handler.cpp.o: /home/krastov/OreoBuild/OreoBuild/src/cli_handler.cpp
+CMakeFiles/oreobuild.dir/src/cli_handler.cpp.o: CMakeFiles/oreobuild.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/krastov/OreoBuild/OreoBuild/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/oreobuild.dir/src/cli_handler.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/oreobuild.dir/src/cli_handler.cpp.o -MF CMakeFiles/oreobuild.dir/src/cli_handler.cpp.o.d -o CMakeFiles/oreobuild.dir/src/cli_handler.cpp.o -c /home/krastov/OreoBuild/OreoBuild/src/cli_handler.cpp
+
+CMakeFiles/oreobuild.dir/src/cli_handler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/oreobuild.dir/src/cli_handler.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/krastov/OreoBuild/OreoBuild/src/cli_handler.cpp > CMakeFiles/oreobuild.dir/src/cli_handler.cpp.i
+
+CMakeFiles/oreobuild.dir/src/cli_handler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/oreobuild.dir/src/cli_handler.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/krastov/OreoBuild/OreoBuild/src/cli_handler.cpp -o CMakeFiles/oreobuild.dir/src/cli_handler.cpp.s
+
+CMakeFiles/oreobuild.dir/src/color.cpp.o: CMakeFiles/oreobuild.dir/flags.make
+CMakeFiles/oreobuild.dir/src/color.cpp.o: /home/krastov/OreoBuild/OreoBuild/src/color.cpp
+CMakeFiles/oreobuild.dir/src/color.cpp.o: CMakeFiles/oreobuild.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/krastov/OreoBuild/OreoBuild/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/oreobuild.dir/src/color.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/oreobuild.dir/src/color.cpp.o -MF CMakeFiles/oreobuild.dir/src/color.cpp.o.d -o CMakeFiles/oreobuild.dir/src/color.cpp.o -c /home/krastov/OreoBuild/OreoBuild/src/color.cpp
+
+CMakeFiles/oreobuild.dir/src/color.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/oreobuild.dir/src/color.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/krastov/OreoBuild/OreoBuild/src/color.cpp > CMakeFiles/oreobuild.dir/src/color.cpp.i
+
+CMakeFiles/oreobuild.dir/src/color.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/oreobuild.dir/src/color.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/krastov/OreoBuild/OreoBuild/src/color.cpp -o CMakeFiles/oreobuild.dir/src/color.cpp.s
+
 # Object files for target oreobuild
 oreobuild_OBJECTS = \
 "CMakeFiles/oreobuild.dir/src/main.cpp.o" \
@@ -160,7 +188,9 @@ oreobuild_OBJECTS = \
 "CMakeFiles/oreobuild.dir/src/core/config.cpp.o" \
 "CMakeFiles/oreobuild.dir/src/core/compiler_gcc.cpp.o" \
 "CMakeFiles/oreobuild.dir/src/core/file_utils.cpp.o" \
-"CMakeFiles/oreobuild.dir/src/core/thread_pool.cpp.o"
+"CMakeFiles/oreobuild.dir/src/core/thread_pool.cpp.o" \
+"CMakeFiles/oreobuild.dir/src/cli_handler.cpp.o" \
+"CMakeFiles/oreobuild.dir/src/color.cpp.o"
 
 # External object files for target oreobuild
 oreobuild_EXTERNAL_OBJECTS =
@@ -171,9 +201,11 @@ oreobuild: CMakeFiles/oreobuild.dir/src/core/config.cpp.o
 oreobuild: CMakeFiles/oreobuild.dir/src/core/compiler_gcc.cpp.o
 oreobuild: CMakeFiles/oreobuild.dir/src/core/file_utils.cpp.o
 oreobuild: CMakeFiles/oreobuild.dir/src/core/thread_pool.cpp.o
+oreobuild: CMakeFiles/oreobuild.dir/src/cli_handler.cpp.o
+oreobuild: CMakeFiles/oreobuild.dir/src/color.cpp.o
 oreobuild: CMakeFiles/oreobuild.dir/build.make
 oreobuild: CMakeFiles/oreobuild.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/krastov/OreoBuild/OreoBuild/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable oreobuild"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/krastov/OreoBuild/OreoBuild/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable oreobuild"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/oreobuild.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -129,6 +129,54 @@ oreobuild/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/oreobuild.dir/build.make CMakeFiles/oreobuild.dir/build
 .PHONY : oreobuild/fast
 
+src/cli_handler.o: src/cli_handler.cpp.o
+.PHONY : src/cli_handler.o
+
+# target to build an object file
+src/cli_handler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/oreobuild.dir/build.make CMakeFiles/oreobuild.dir/src/cli_handler.cpp.o
+.PHONY : src/cli_handler.cpp.o
+
+src/cli_handler.i: src/cli_handler.cpp.i
+.PHONY : src/cli_handler.i
+
+# target to preprocess a source file
+src/cli_handler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/oreobuild.dir/build.make CMakeFiles/oreobuild.dir/src/cli_handler.cpp.i
+.PHONY : src/cli_handler.cpp.i
+
+src/cli_handler.s: src/cli_handler.cpp.s
+.PHONY : src/cli_handler.s
+
+# target to generate assembly for a file
+src/cli_handler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/oreobuild.dir/build.make CMakeFiles/oreobuild.dir/src/cli_handler.cpp.s
+.PHONY : src/cli_handler.cpp.s
+
+src/color.o: src/color.cpp.o
+.PHONY : src/color.o
+
+# target to build an object file
+src/color.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/oreobuild.dir/build.make CMakeFiles/oreobuild.dir/src/color.cpp.o
+.PHONY : src/color.cpp.o
+
+src/color.i: src/color.cpp.i
+.PHONY : src/color.i
+
+# target to preprocess a source file
+src/color.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/oreobuild.dir/build.make CMakeFiles/oreobuild.dir/src/color.cpp.i
+.PHONY : src/color.cpp.i
+
+src/color.s: src/color.cpp.s
+.PHONY : src/color.s
+
+# target to generate assembly for a file
+src/color.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/oreobuild.dir/build.make CMakeFiles/oreobuild.dir/src/color.cpp.s
+.PHONY : src/color.cpp.s
+
 src/core/build_system.o: src/core/build_system.cpp.o
 .PHONY : src/core/build_system.o
 
@@ -282,6 +330,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... oreobuild"
+	@echo "... src/cli_handler.o"
+	@echo "... src/cli_handler.i"
+	@echo "... src/cli_handler.s"
+	@echo "... src/color.o"
+	@echo "... src/color.i"
+	@echo "... src/color.s"
 	@echo "... src/core/build_system.o"
 	@echo "... src/core/build_system.i"
 	@echo "... src/core/build_system.s"

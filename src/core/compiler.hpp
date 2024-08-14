@@ -16,4 +16,4 @@ public:
 
 std::unique_ptr<Compiler> createCompiler(const std::string& name);
 
-} // namespace OreoBuild
+}

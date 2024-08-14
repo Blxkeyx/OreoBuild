@@ -186,4 +186,12 @@ CMakeFiles/oreobuild.dir/src/core/config.cpp.o: \
  /usr/include/c++/10/bits/shared_ptr_base.h \
  /usr/include/c++/10/bits/allocated_ptr.h \
  /usr/include/c++/10/bits/refwrap.h /usr/include/c++/10/bits/fs_dir.h \
- /usr/include/c++/10/bits/fs_ops.h
+ /usr/include/c++/10/bits/fs_ops.h /usr/include/c++/10/algorithm \
+ /usr/include/c++/10/bits/stl_algo.h \
+ /usr/include/c++/10/bits/algorithmfwd.h \
+ /usr/include/c++/10/bits/stl_heap.h \
+ /usr/include/c++/10/bits/stl_tempbuf.h \
+ /usr/include/c++/10/bits/uniform_int_dist.h \
+ /usr/include/c++/10/pstl/glue_algorithm_defs.h \
+ /usr/include/c++/10/functional /usr/include/c++/10/bits/std_function.h \
+ /usr/include/c++/10/pstl/execution_defs.h

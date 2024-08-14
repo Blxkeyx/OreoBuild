@@ -174,4 +174,4 @@ CMakeFiles/oreobuild.dir/src/core/thread_pool.cpp.o: \
  /usr/include/c++/10/bits/basic_string.tcc \
  /usr/include/c++/10/bits/std_mutex.h \
  /usr/include/c++/10/bits/unique_lock.h \
- /usr/include/c++/10/condition_variable
+ /usr/include/c++/10/condition_variable /usr/include/c++/10/atomic

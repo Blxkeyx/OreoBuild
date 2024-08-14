@@ -180,8 +180,9 @@ CMakeFiles/oreobuild.dir/src/core/build_system.cpp.o: \
  /usr/include/x86_64-linux-gnu/c++/10/bits/error_constants.h \
  /usr/include/c++/10/stdexcept /usr/include/c++/10/bits/std_mutex.h \
  /usr/include/c++/10/bits/unique_lock.h \
- /usr/include/c++/10/condition_variable /usr/include/c++/10/set \
- /usr/include/c++/10/bits/stl_tree.h /usr/include/c++/10/bits/stl_set.h \
+ /usr/include/c++/10/condition_variable /usr/include/c++/10/atomic \
+ /usr/include/c++/10/set /usr/include/c++/10/bits/stl_tree.h \
+ /usr/include/c++/10/bits/stl_set.h \
  /usr/include/c++/10/bits/stl_multiset.h /usr/include/c++/10/fstream \
  /usr/include/c++/10/istream /usr/include/c++/10/ios \
  /usr/include/c++/10/bits/ios_base.h \
@@ -212,7 +213,7 @@ CMakeFiles/oreobuild.dir/src/core/build_system.cpp.o: \
  /usr/include/c++/10/bits/quoted_string.h /usr/include/c++/10/sstream \
  /usr/include/c++/10/bits/sstream.tcc /usr/include/c++/10/codecvt \
  /usr/include/c++/10/bits/fs_dir.h /usr/include/c++/10/bits/fs_ops.h \
+ /home/krastov/OreoBuild/OreoBuild/src/color.hpp \
  /usr/include/c++/10/iostream /usr/include/c++/10/algorithm \
  /usr/include/c++/10/pstl/glue_algorithm_defs.h \
- /usr/include/c++/10/future /usr/include/c++/10/atomic \
- /usr/include/c++/10/bits/atomic_futex.h
+ /usr/include/c++/10/future /usr/include/c++/10/bits/atomic_futex.h

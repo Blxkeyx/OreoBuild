@@ -1,4 +1,8 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/oreobuild.dir/src/cli_handler.cpp.o"
+  "CMakeFiles/oreobuild.dir/src/cli_handler.cpp.o.d"
+  "CMakeFiles/oreobuild.dir/src/color.cpp.o"
+  "CMakeFiles/oreobuild.dir/src/color.cpp.o.d"
   "CMakeFiles/oreobuild.dir/src/core/build_system.cpp.o"
   "CMakeFiles/oreobuild.dir/src/core/build_system.cpp.o.d"
   "CMakeFiles/oreobuild.dir/src/core/compiler_gcc.cpp.o"

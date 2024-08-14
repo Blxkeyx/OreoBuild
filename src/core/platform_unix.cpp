@@ -16,4 +16,4 @@ std::unique_ptr<Platform> createPlatform() {
     return std::make_unique<UnixPlatform>();
 }
 
-} // namespace OreoBuild
+}

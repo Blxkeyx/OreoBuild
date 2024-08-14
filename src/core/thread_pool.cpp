@@ -1,4 +1,5 @@
 #include "thread_pool.hpp"
+#include <stdexcept>
 
 ThreadPool::ThreadPool(size_t numThreads) : stop(false) {
     for (size_t i = 0; i < numThreads; ++i) {
@@ -32,7 +33,15 @@ ThreadPool::~ThreadPool() {
 void ThreadPool::enqueue(std::function<void()> task) {
     {
         std::unique_lock<std::mutex> lock(queueMutex);
+        if (stop) {
+            throw std::runtime_error("Enqueue on stopped ThreadPool");
+        }
         tasks.emplace(std::move(task));
     }
     condition.notify_one();
+}
+
+size_t ThreadPool::getQueueSize() const {
+    std::unique_lock<std::mutex> lock(queueMutex);
+    return tasks.size();
 }

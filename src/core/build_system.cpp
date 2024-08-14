@@ -13,12 +13,43 @@ namespace OreoBuild {
 
 BuildSystem::BuildSystem() 
     : compiler(createCompiler("gcc")),
-      threadPool(std::make_unique<ThreadPool>(std::thread::hardware_concurrency())) {}
+      threadPool(std::make_unique<ThreadPool>(std::thread::hardware_concurrency())),
+      cacheFilePath("build_cache.txt") {
+    loadCache();
+}
 
-BuildSystem::~BuildSystem() = default;
+BuildSystem::~BuildSystem() {
+    saveCache();
+}
 
 void BuildSystem::loadConfig(const std::string& configFile) {
     config.loadFromFile(configFile);
+}
+
+void BuildSystem::loadCache() {
+    std::ifstream cacheFile(cacheFilePath);
+    if (cacheFile.is_open()) {
+        std::string line;
+        while (std::getline(cacheFile, line)) {
+            std::istringstream iss(line);
+            std::string sourceFile;
+            std::time_t lastModified;
+            if (iss >> sourceFile >> lastModified) {
+                cacheMap[sourceFile] = lastModified;
+            }
+        }
+        cacheFile.close();
+    }
+}
+
+void BuildSystem::saveCache() {
+    std::ofstream cacheFile(cacheFilePath);
+    if (cacheFile.is_open()) {
+        for (const auto& entry : cacheMap) {
+            cacheFile << entry.first << " " << entry.second << std::endl;
+        }
+        cacheFile.close();
+    }
 }
 
 void BuildSystem::build(const std::string& target) {
@@ -53,6 +84,10 @@ void BuildSystem::build(const std::string& target) {
                 }
                 FileUtils::updateTimestamp(obj);
                 compiledCount++;
+
+                // Update cache after successful compilation
+                std::time_t lastModified = std::filesystem::last_write_time(source).time_since_epoch().count();
+                cacheMap[source] = lastModified;
             } else {
                 {
                     std::lock_guard<std::mutex> lock(outputMutex);
@@ -103,8 +138,10 @@ bool BuildSystem::needsRebuild(const std::string& source, const std::string& obj
         return true;
     }
 
-    if (FileUtils::isNewer(source, object)) {
-        std::cout << "Source file is newer than object file. Rebuilding." << std::endl;
+    std::time_t lastModified = std::filesystem::last_write_time(source).time_since_epoch().count();
+    auto it = cacheMap.find(source);
+    if (it == cacheMap.end() || lastModified > it->second) {
+        std::cout << "Source file is newer than cached timestamp. Rebuilding." << std::endl;
         return true;
     }
 
@@ -130,7 +167,7 @@ void BuildSystem::parseDependencies(const std::string& source) {
     std::cout << "Parsing dependencies for " << source << std::endl;
     if (dependencies.find(source) != dependencies.end()) {
         std::cout << "Dependencies for " << source << " already parsed." << std::endl;
-        return;  // Already parsed
+        return;
     }
 
     std::ifstream file(source);
@@ -142,10 +179,9 @@ void BuildSystem::parseDependencies(const std::string& source) {
             iss >> include >> filename;
             if (!filename.empty()) {
                 bool isSystemHeader = filename[0] == '<';
-                filename = filename.substr(1, filename.length() - 2);  // Remove < > or " "
+                filename = filename.substr(1, filename.length() - 2);
                 
                 if (!isSystemHeader) {
-                    // Check if the file exists in the include paths
                     for (const auto& path : config.getIncludePaths()) {
                         std::string fullPath = std::filesystem::path(path) / filename;
                         if (std::filesystem::exists(fullPath)) {
@@ -162,14 +198,12 @@ void BuildSystem::parseDependencies(const std::string& source) {
 
 void BuildSystem::addDependency(const std::string& source, const std::string& dependency) {
     dependencies[source].insert(dependency);
-    // Recursively parse dependencies of the included file
     parseDependencies(dependency);
 }
 
 void BuildSystem::clean() {
     std::cout << "Cleaning build artifacts..." << std::endl;
     
-    // Remove object files
     for (const auto& obj : getObjectFiles()) {
         if (std::filesystem::exists(obj)) {
             std::filesystem::remove(obj);
@@ -177,12 +211,16 @@ void BuildSystem::clean() {
         }
     }
     
-    // Remove the output file
     std::string output = config.getOutputFile();
     if (std::filesystem::exists(output)) {
         std::filesystem::remove(output);
         std::cout << "Removed: " << output << std::endl;
     }
+    
+    // Clear the cache file
+    std::ofstream cacheFile(cacheFilePath, std::ios::trunc);
+    cacheFile.close();
+    cacheMap.clear();
     
     std::cout << "Clean complete." << std::endl;
 }

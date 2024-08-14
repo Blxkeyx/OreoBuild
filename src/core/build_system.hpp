@@ -7,6 +7,7 @@
 #include <unordered_map>
 #include <vector>
 #include <set>
+#include <fstream>
 
 namespace OreoBuild {
 
@@ -24,11 +25,15 @@ private:
     std::unique_ptr<Compiler> compiler;
     std::unordered_map<std::string, std::set<std::string>> dependencies;
     std::unique_ptr<ThreadPool> threadPool;
+    std::string cacheFilePath;
+    std::unordered_map<std::string, std::time_t> cacheMap;
 
     bool needsRebuild(const std::string& source, const std::string& object);
     void parseDependencies(const std::string& source);
     std::vector<std::string> getObjectFiles();
     void addDependency(const std::string& source, const std::string& dependency);
+    void loadCache();
+    void saveCache();
 };
 
 }
